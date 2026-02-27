@@ -15,7 +15,7 @@
 - Per-tier MISR for fault signature aggregation → single `fault_flag`
 - Full OpenLane flow on **Sky130A** PDK (DRC/LVS clean)
 - **PPO RL agent** automatically tunes density, die area, core utilization & routing adjustments
-- **Up to 65% reduction** in maximum routing congestion vs default flow
+- **Up to 39% reduction** in maximum routing congestion vs default flow
 
 ## 📁 Repository Structure
 ```text
@@ -31,10 +31,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 │   └── JSCAN_TB.v                # Testbench with corner cases
 ├── ASIC_FLOW/                    # OpenLane results & final outputs
 │   └── reports/                  # Congestion, timing, DRC reports
-├── RL_Optimization/              # Reinforcement Learning tools
-│   ├── ppo_openlane_final.zip    # Pre-trained PPO model
-│   ├── asic_rl_env/              # Custom Gymnasium environment
-│   └── jscan_rl_best_v2.py       # Main RL script 
+├── RL/                           # Reinforcement Learning MODELs
 └── README.md
 ```
 
