@@ -1,0 +1,5 @@
+
+66. Executing CHECK pass (checking for obvious problems).
+Checking module top_3d_jscan...
+Warning: Wire top_3d_jscan.\fault_flag is used but has no driver.
+Found and reported 1 problems.

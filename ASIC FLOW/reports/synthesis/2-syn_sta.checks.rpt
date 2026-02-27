@@ -1,0 +1,353 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: reset_n (input port clocked by scan_clk)
+Endpoint: _240_ (recovery check against rising-edge clock scan_clk)
+Path Group: asynchronous
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock scan_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.77    0.55    2.55 ^ reset_n (in)
+    49    0.17                           reset_n (net)
+                  0.77    0.00    2.55 ^ _240_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                  2.55   data arrival time
+
+                  0.15   10.00   10.00   clock scan_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                                  9.75 ^ _240_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.03    9.78   library recovery time
+                                  9.78   data required time
+-----------------------------------------------------------------------------
+                                  9.78   data required time
+                                 -2.55   data arrival time
+-----------------------------------------------------------------------------
+                                  7.22   slack (MET)
+
+
+Startpoint: reset_n (input port clocked by scan_clk)
+Endpoint: _263_ (rising edge-triggered flip-flop clocked by scan_clk)
+Path Group: scan_clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock scan_clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  0.77    0.55    2.55 ^ reset_n (in)
+    49    0.17                           reset_n (net)
+                  0.77    0.00    2.55 ^ _179_/C (sky130_fd_sc_hd__and4_2)
+                  0.06    0.35    2.91 ^ _179_/X (sky130_fd_sc_hd__and4_2)
+     1    0.00                           _085_ (net)
+                  0.06    0.00    2.91 ^ _180_/S (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.34    3.24 v _180_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _086_ (net)
+                  0.05    0.00    3.24 v _181_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09    3.33 v _181_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _023_ (net)
+                  0.02    0.00    3.33 v _263_/D (sky130_fd_sc_hd__dfxtp_2)
+                                  3.33   data arrival time
+
+                  0.15   10.00   10.00   clock scan_clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                                  9.75 ^ _263_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.08    9.67   library setup time
+                                  9.67   data required time
+-----------------------------------------------------------------------------
+                                  9.67   data required time
+                                 -3.33   data arrival time
+-----------------------------------------------------------------------------
+                                  6.35   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+reset_n                                 0.75    0.77   -0.02 (VIOLATED)
+_179_/C                                 0.75    0.77   -0.02 (VIOLATED)
+_185_/A                                 0.75    0.77   -0.02 (VIOLATED)
+_212_/A                                 0.75    0.77   -0.02 (VIOLATED)
+_240_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_241_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_242_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_243_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_244_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_245_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_246_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_247_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_248_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_249_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_250_/SET_B                             0.75    0.77   -0.02 (VIOLATED)
+_251_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_252_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_253_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_254_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_255_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_256_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_257_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_258_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_259_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_260_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_261_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_262_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_264_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_266_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_267_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_268_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_269_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_270_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_271_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_272_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_273_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_274_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_275_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_277_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_278_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_279_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_280_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_281_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_282_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_283_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_284_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_285_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_286_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_287_/RESET_B                           0.75    0.77   -0.02 (VIOLATED)
+_288_/SET_B                             0.75    0.77   -0.02 (VIOLATED)
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+reset_n                                  10     49    -39 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 187 unannotated drivers.
+ reset_n
+ scan_clk
+ scan_in
+ test_enable
+ _120_/X
+ _121_/Y
+ _122_/X
+ _123_/X
+ _124_/X
+ _125_/X
+ _126_/X
+ _127_/X
+ _128_/X
+ _129_/X
+ _130_/Y
+ _131_/X
+ _132_/X
+ _133_/Y
+ _134_/X
+ _135_/X
+ _136_/Y
+ _137_/Y
+ _138_/X
+ _139_/Y
+ _140_/Y
+ _141_/X
+ _142_/X
+ _143_/Y
+ _144_/Y
+ _145_/X
+ _146_/X
+ _147_/Y
+ _148_/X
+ _149_/X
+ _150_/X
+ _151_/X
+ _152_/X
+ _153_/X
+ _154_/X
+ _155_/X
+ _156_/X
+ _157_/Y
+ _158_/X
+ _159_/X
+ _160_/X
+ _161_/X
+ _162_/X
+ _163_/X
+ _164_/X
+ _165_/X
+ _166_/X
+ _167_/X
+ _168_/X
+ _169_/X
+ _170_/X
+ _171_/X
+ _172_/X
+ _173_/X
+ _174_/X
+ _175_/X
+ _176_/X
+ _177_/X
+ _178_/Y
+ _179_/X
+ _180_/X
+ _181_/X
+ _182_/X
+ _183_/X
+ _184_/X
+ _185_/X
+ _186_/X
+ _187_/X
+ _188_/Y
+ _189_/X
+ _190_/X
+ _191_/X
+ _192_/X
+ _193_/X
+ _194_/X
+ _195_/X
+ _196_/X
+ _197_/X
+ _198_/X
+ _199_/X
+ _200_/X
+ _201_/X
+ _202_/X
+ _203_/X
+ _204_/X
+ _205_/X
+ _206_/X
+ _207_/X
+ _208_/Y
+ _209_/X
+ _210_/X
+ _211_/X
+ _212_/X
+ _213_/X
+ _214_/X
+ _215_/X
+ _216_/X
+ _217_/X
+ _218_/X
+ _219_/X
+ _220_/X
+ _221_/X
+ _222_/X
+ _223_/X
+ _224_/X
+ _225_/X
+ _226_/X
+ _227_/X
+ _228_/X
+ _229_/X
+ _230_/X
+ _231_/X
+ _232_/X
+ _233_/X
+ _234_/X
+ _235_/X
+ _236_/X
+ _237_/X
+ _238_/X
+ _239_/X
+ _240_/Q
+ _241_/Q
+ _242_/Q
+ _243_/Q
+ _244_/Q
+ _245_/Q
+ _246_/Q
+ _247_/Q
+ _248_/Q
+ _249_/Q
+ _250_/Q
+ _251_/Q
+ _252_/Q
+ _253_/Q
+ _254_/Q
+ _255_/Q
+ _256_/Q
+ _257_/Q
+ _258_/Q
+ _259_/Q
+ _260_/Q
+ _261_/Q
+ _262_/Q
+ _263_/Q
+ _264_/Q
+ _265_/Q
+ _266_/Q
+ _267_/Q
+ _268_/Q
+ _269_/Q
+ _270_/Q
+ _271_/Q
+ _272_/Q
+ _273_/Q
+ _274_/Q
+ _275_/Q
+ _276_/Q
+ _277_/Q
+ _278_/Q
+ _279_/Q
+ _280_/Q
+ _281_/Q
+ _282_/Q
+ _283_/Q
+ _284_/Q
+ _285_/Q
+ _286_/Q
+ _287_/Q
+ _288_/Q
+ _289_/X
+ _290_/X
+ _291_/X
+ _292_/X
+ _293_/X
+ _294_/X
+ _295_/X
+ _296_/X
+ _297_/X
+ _298_/X
+ _299_/X
+ _300_/X
+ _301_/X
+ _302_/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 50
+max fanout violation count 1
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
