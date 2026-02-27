@@ -6,7 +6,7 @@
 ![RL](https://img.shields.io/badge/Optimized-PPO_RL-green)
 ![3D-IC](https://img.shields.io/badge/Tech-Monolithic_3D-8A2BE2)
 
-**Complete RTL-to-GDSII Monolithic 3D Joint Scan Architecture (JSCAN) with PPO Reinforcement Learning for ultra-low routing congestion and power optimisation.**
+**Complete RTL-to-GDS Monolithic 3D Joint Scan Architecture (JSCAN) with PPO Reinforcement Learning for ultra-low routing congestion and power optimisation.**
 
 ## ✨ Project Highlights
 
