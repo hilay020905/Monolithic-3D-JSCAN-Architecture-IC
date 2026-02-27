@@ -15,7 +15,7 @@
 - Per-tier MISR for fault signature aggregation → single `fault_flag`
 - Full OpenLane flow on **Sky130A** PDK (DRC/LVS clean)
 - **PPO RL agent** automatically tunes density, die area, core utilization & routing adjustments
-- **Up to 39% reduction** in maximum routing congestion vs default flow
+- **Up to 39.66% reduction** in maximum routing congestion vs default flow
 
 ## 📁 Repository Structure
 ```text
