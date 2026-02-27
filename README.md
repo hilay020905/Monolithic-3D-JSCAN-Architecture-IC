@@ -36,7 +36,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 └── README.md
 ```
 ## 🏗️ Openlane flow 
-![Result](IMAGES/OPENLANE FLOW.png)
+![Result](IMAGES/OPENLANE_FLOW.png)
 ## 🏗️ Architecture
 
 **3-Tier Monolithic 3D JSCAN**
