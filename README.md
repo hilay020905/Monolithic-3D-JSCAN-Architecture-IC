@@ -46,7 +46,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 - Supports at-speed testing with shift/capture control
 
 ## ✨ Results
-
+![Result](IMAGES/RESULT.png)
 
 ## 🚀 Quick Start (Ubuntu)
 ### 1. Setup Design
