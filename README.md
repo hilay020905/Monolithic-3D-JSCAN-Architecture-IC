@@ -43,28 +43,12 @@ Monolithic-3D-JSCAN-Architecture-IC/
 - Built-in MISR on every tier
 - Supports at-speed testing with shift/capture control
 
-
-
 ## 🚀 Quick Start (Ubuntu)
 
 ### 1. Setup Design
 ```bash
-cd ~/OpenLane
-mkdir -p designs/top_3d_jscan/src
-cp /path/to/your/RTL/*.v designs/top_3d_jscan/src/
-
 cd ~/ppo_openlane_final
-
-# Step 1: Fast surrogate training (4-8 min)
-python jscan_rl_best_v2.py --surrogate --steps 6000
-
-# Step 2: Real optimization with auto-cleanup (25-50 min)
-python jscan_rl_best_v2.py --real --steps 80
-
-cd ~/OpenLane
-make DESIGN=top_3d_jscan \
-     INIT_DEF=~/rl_jscan_best/best_low_congestion.def \
-     TAG=rl_low_congestion_jscan
-
+source ~/openlane-venv/bin/activate
+python jscan_rl_pro_v7.py
 ```
 Final GDS: ~/OpenLane/designs/top_3d_jscan/runs/rl_low_congestion_jscan/results/final/top_3d_jscan.gds
