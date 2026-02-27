@@ -36,7 +36,9 @@ Monolithic-3D-JSCAN-Architecture-IC/
 └── README.md
 ```
 ## 🏗️ Openlane flow 
+
 ![Result](IMAGES/OPENLANE_FLOW.png)
+
 ## 🏗️ Proposed Architecture
 
 **3-Tier Monolithic 3D JSCAN**
@@ -44,9 +46,11 @@ Monolithic-3D-JSCAN-Architecture-IC/
 - Global Test Controller orchestrates all modes
 - Built-in MISR on every tier
 - Supports at-speed testing with shift/capture control
+  
 ![Result](IMAGES/3D_JSCAN.png)
 
 ## ✨ Results
+
 ![Result](IMAGES/RESULT.png)
 
 ## 🚀 Quick Start (Ubuntu)
