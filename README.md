@@ -37,7 +37,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 ```
 ## 🏗️ Openlane flow 
 ![Result](IMAGES/OPENLANE_FLOW.png)
-## 🏗️ Architecture
+## 🏗️ Proposed Architecture
 
 **3-Tier Monolithic 3D JSCAN**
 - Each tier contains: MSS (Serial), PRAS (Random Access), LC 
