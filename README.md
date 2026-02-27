@@ -31,9 +31,11 @@ Monolithic-3D-JSCAN-Architecture-IC/
 │   └── JSCAN_TB.v                # Testbench with corner cases
 ├── ASIC_FLOW/                    # OpenLane results & final outputs
 │   └── reports/                  # Congestion, timing, DRC reports
+├── IMAGES/                       # Images
 ├── RL/                           # Reinforcement Learning MODELs
 └── README.md
 ```
+## 🏗️ Openlane flow 
 
 ## 🏗️ Architecture
 
@@ -43,8 +45,10 @@ Monolithic-3D-JSCAN-Architecture-IC/
 - Built-in MISR on every tier
 - Supports at-speed testing with shift/capture control
 
-## 🚀 Quick Start (Ubuntu)
+## ✨ Results
 
+
+## 🚀 Quick Start (Ubuntu)
 ### 1. Setup Design
 ```bash
 cd ~/ppo_openlane_final
