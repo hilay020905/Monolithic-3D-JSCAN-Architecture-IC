@@ -47,7 +47,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 - Built-in MISR on every tier
 - Supports at-speed testing with shift/capture control
   
-![Result](IMAGES/3D_JSCAN_ARC.JPG)
+![Result](IMAGES/3D_JSCAN_ARC.jpg)
 
 ## ✨ Results
 
