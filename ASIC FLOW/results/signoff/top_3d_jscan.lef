@@ -1,0 +1,149 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO top_3d_jscan
+  CLASS BLOCK ;
+  FOREIGN top_3d_jscan ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 87.150 BY 97.870 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 17.505 10.640 19.105 84.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 36.480 10.640 38.080 84.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 55.455 10.640 57.055 84.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 74.430 10.640 76.030 84.560 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 22.560 81.660 24.160 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 40.920 81.660 42.520 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 59.280 81.660 60.880 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 77.640 81.660 79.240 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 14.205 10.640 15.805 84.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 33.180 10.640 34.780 84.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 52.155 10.640 53.755 84.560 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 71.130 10.640 72.730 84.560 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 19.260 81.660 20.860 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 37.620 81.660 39.220 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 55.980 81.660 57.580 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.280 74.340 81.660 75.940 ;
+    END
+  END VPWR
+  PIN fault_flag
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 74.840 4.000 75.440 ;
+    END
+  END fault_flag
+  PIN reset_n
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END reset_n
+  PIN scan_clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met3 ;
+        RECT 83.150 57.840 87.150 58.440 ;
+    END
+  END scan_clk
+  PIN scan_in
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
+    PORT
+      LAYER met2 ;
+        RECT 48.390 93.870 48.670 97.870 ;
+    END
+  END scan_in
+  PIN test_enable
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    PORT
+      LAYER met2 ;
+        RECT 70.930 0.000 71.210 4.000 ;
+    END
+  END test_enable
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 81.420 84.405 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 81.420 84.560 ;
+      LAYER met2 ;
+        RECT 0.100 93.590 48.110 93.870 ;
+        RECT 48.950 93.590 79.480 93.870 ;
+        RECT 0.100 4.280 79.480 93.590 ;
+        RECT 0.650 4.000 70.650 4.280 ;
+        RECT 71.490 4.000 79.480 4.280 ;
+      LAYER met3 ;
+        RECT 3.990 75.840 83.150 84.485 ;
+        RECT 4.400 74.440 83.150 75.840 ;
+        RECT 3.990 58.840 83.150 74.440 ;
+        RECT 3.990 57.440 82.750 58.840 ;
+        RECT 3.990 10.715 83.150 57.440 ;
+      LAYER met4 ;
+        RECT 68.375 47.775 68.705 58.305 ;
+  END
+END top_3d_jscan
+END LIBRARY
+
