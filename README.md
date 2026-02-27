@@ -18,23 +18,29 @@
 - **Up to 65% reduction** in maximum routing congestion vs default flow
 
 ## 📁 Repository Structure
+```text
 Monolithic-3D-JSCAN-Architecture-IC/
-├── RTL/
-│   ├── LC.v
-│   ├── GTC.v
-│   ├── MISR.v
-│   ├── MSS.v
-│   ├── PRAS.v
-│   ├── TIER_BLOCK.v
-│   ├── JSCAN_TOP.v
-│   └── JSCAN_TB.v
-├── ASIC_FLOW/                  # All OpenLane runs & final GDS
-├── ppo_openlane_final.zip      # Pre-trained PPO model
-├── asic_rl_env/                # Custom Gymnasium RL environment
-├── jscan_rl_best_v2.py         # Ready-to-run RL optimizer (CPU only)
-├── config.json
+├── RTL/                          # All Verilog RTL files
+│   ├── JSCAN_TOP.v               # Top-level 3-tier integration
+│   ├── TIER_BLOCK.v              # Per-tier block (SAS + RAS + TSV)
+│   ├── GTC.v                     # Global Test Controller
+│   ├── MSS.v                     # Multi-bit Scan Chain (SAS mode)
+│   ├── PRAS.v                    # Pseudo-Random Access Scan
+│   ├── LC.v                      # Layer Connections (TSV wrapper)
+│   ├── MISR.v                    # Multiple Input Signature Register
+│   └── JSCAN_TB.v                # Testbench with corner cases
+├── ASIC_FLOW/                    # OpenLane results & final outputs
+│   ├── baseline/                 # Default OpenLane run
+│   ├── rl_low_congestion/        # Best RL-optimized run
+│   └── reports/                  # Congestion, timing, DRC reports
+├── RL_Optimization/              # Reinforcement Learning tools
+│   ├── ppo_openlane_final.zip    # Pre-trained PPO model
+│   ├── asic_rl_env/              # Custom Gymnasium environment
+│   └── jscan_rl_best_v2.py       # Main RL script (CPU-only)
+├── config.json                   # OpenLane configuration
+├── Makefile                      # Optional helper commands
 └── README.md
-
+```
 
 ## 🏗️ Architecture
 
