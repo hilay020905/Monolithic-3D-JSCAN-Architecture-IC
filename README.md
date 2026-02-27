@@ -53,7 +53,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 
 ![Result](IMAGES/RESULT.png)
 
-## 🚀 Quick Start (Ubuntu)
+## Ubuntu
 ### 1. Setup Design
 ```bash
 cd ~/ppo_openlane_final
