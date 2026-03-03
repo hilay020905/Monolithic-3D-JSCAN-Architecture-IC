@@ -39,7 +39,6 @@ module tier_block #(
         .scan_out(ras_out)
     );
 
-    // TSV Wrapper
     layer_connections LC (
         .clk(scan_clk),
         .reset_n(reset_n),
@@ -61,5 +60,6 @@ module tier_block #(
         .data_in(scan_data),
         .signature(misr_out)
     );
+
 
 endmodule
