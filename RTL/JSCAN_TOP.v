@@ -6,7 +6,6 @@ module top_3d_jscan (
     output wire        fault_flag
 );
 
-    // Adding (* keep = "true" *) prevents Vivado from optimizing these out
     (* keep = "true" *) wire [1:0] tier_sel;
     (* keep = "true" *) wire [1:0] mode_sel;
     (* keep = "true" *) wire [3:0] col_addr;
@@ -27,7 +26,6 @@ module top_3d_jscan (
         .fault_flag(fault_flag)
     );
 
-    // Ensure instances are not optimized away 
     tier_block #(.TIER_ID(2'b01)) TIER1 (
         .scan_clk(scan_clk), .reset_n(reset_n), .tier_sel(tier_sel),
         .mode_sel(mode_sel), .col_addr(col_addr), .cluster_sel(cluster_sel),
@@ -48,5 +46,6 @@ module top_3d_jscan (
         .shift_en(shift_en), .capture_en(capture_en), .test_en(test_en),
         .scan_in(tsv_scan_in), .misr_out(misr_out_t3)
     );
+
 
 endmodule
