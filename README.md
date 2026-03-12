@@ -52,7 +52,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 ## ✨ Results
 
 ![Result](IMAGES/RESULT.png)
-
+![Result](IMAGES/036d183b-00ab-4d23-aab8-1a5b3281a6ab.jpeg)
 ## Ubuntu
 ### 1. Setup Design
 ```bash
