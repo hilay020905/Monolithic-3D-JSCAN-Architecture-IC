@@ -32,7 +32,8 @@ Monolithic-3D-JSCAN-Architecture-IC/
 ├── ASIC_FLOW/                    # OpenLane results & final outputs
 │   └── reports/                  # Congestion, timing, DRC reports
 ├── IMAGES/                       # Images
-├── RL/                           # Reinforcement Learning MODELs
+├── RL/                           # Reinforcement Learning MODELs 
+├── 3D_JSCAN_V2                   # Contains results from Cadence
 └── README.md
 ```
 ## 🏗️ Openlane flow 
