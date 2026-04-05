@@ -49,7 +49,7 @@ Monolithic-3D-JSCAN-Architecture-IC/
 - Supports at-speed testing with shift/capture control
   
 ![Result](IMAGES/JSCAN_ARC.jpg)
-![Result](IMAGES/FIG 01.png)
+![Result](IMAGES/1.png)
 
 ## ✨ Results
 
